@@ -23,7 +23,7 @@
  - Implemented internal tooling to parse and structure information from a sales database with Pandas and NumPy
 
 ---
-**Engineering Research Intern** @ _Indian Institute of Astrophyisics
+**Engineering Research Intern** @ _Indian Institute of Astrophyisics_
 <br><br>
  - Designed a payload sent to the upper troposphere to collect and analyze ozone concentration data
  - Implemented structural changes and calibrated sensors to ensure functionality under extreme weatherand impact conditions
@@ -31,14 +31,11 @@
 
 ---
 
-### Category Name 2
+### Skills
 
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
-
+**Languages:** `Java, Python, C/C++, GLSL, SQL, JavaScript, HTML/CSS, MATLAB`
+**Tools/Frameworks:** `Git, VSCode, XCode, PyCharm, React, OpenGL, IntelliJ, Android Studio, AdobeSuite, Figma`
+**Libraries:** `WebGL, Pandas, NumPy, Matplotlib, Lenstronomy`
 ---
 
 
