@@ -31,7 +31,7 @@ I'm currently looking for SWE or physics-related computational internship positi
 **Engineering Research Intern** @ _Indian Institute of Astrophyisics_
 <br>
  - Designed a payload sent to the upper troposphere to collect and analyze ozone concentration data
- - Implemented structural changes and calibrated sensors to ensure functionality under extreme weatherand impact conditions
+ - Implemented structural changes and calibrated sensors to ensure functionality under extreme weather and impact conditions
  - Published a comprehensive research paper detailing the results and consequences of the experiment
 
 ---
