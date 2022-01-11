@@ -1,11 +1,6 @@
 title: Govind Nair # your name (or website title) here
 logo: "/images/wunderblu prof_Original.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Junior at University of Illinois at Urbana-Champaign
-  <br>
-  Majoring in Engineering Physics, Concentration in Computational Physics
-  <br>
-  <br>
   Feel free to contact me at <a href="mailto:govindn3@illinois.edu"> govindn3@illinois.edu </a> or on <a href="https://www.linkedin.com/in/govindnair2/">LinkedIn</a>!
   
 theme: jekyll-theme-minimal
