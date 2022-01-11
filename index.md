@@ -1,3 +1,9 @@
+# Hi, I'm Govind.
+<br>
+I'm a Junior in Engineering Physics, concentrating in Computational Physics, with a minor in Computer Science, at UIUC. I have a vested interest in both physics and computer science, and I enjoy finding ways that the two interact. In my spare time, I'm a member of SIGlug, and I also enjoy making music, watching my cats, and learning new things!
+<br>
+I'm currently looking for SWE or physics-related computational internship positions for Summer 2022! 
+
 ## Portfolio
 
 ---
