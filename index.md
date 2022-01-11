@@ -1,5 +1,4 @@
 # Hi, I'm Govind.
-<br>
 I'm a junior in Engineering Physics with a concentration in Computational Physics and a minor in Computer Science at the [University of Illinois at Urbana Champaign](https://illinois.edu). I have a vested interest in both physics and computer science, and I enjoy finding ways that the two intersect. In my spare time, I'm a member of [SIGGlug](https://acm.illinois.edu/sigs), and I also enjoy making music, watching my cats, and learning new things!
 <br><br>
 I'm currently looking for SWE or physics-related computational internship positions for Summer 2022! 
