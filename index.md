@@ -2,9 +2,9 @@
 
 ---
 
-### Category Name 1 
+### Experience
 
-[Project 1 Title](/sample_page)
+[Teaching Assistant](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
