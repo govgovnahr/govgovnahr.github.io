@@ -4,7 +4,8 @@
 
 ### Experience
 
-[Teaching Assistant]
+Teaching Assistant
+<br><br>
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
