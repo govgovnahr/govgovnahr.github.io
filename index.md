@@ -4,7 +4,7 @@
 
 ### Experience
 
-[Teaching Assistant](/sample_page)
+[Teaching Assistant]
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
