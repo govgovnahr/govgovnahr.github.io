@@ -34,8 +34,11 @@
 ### Skills
 
 **Languages:** `Java, Python, C/C++, GLSL, SQL, JavaScript, HTML/CSS, MATLAB`
+<br>
 **Tools/Frameworks:** `Git, VSCode, XCode, PyCharm, React, OpenGL, IntelliJ, Android Studio, AdobeSuite, Figma`
+<br>
 **Libraries:** `WebGL, Pandas, NumPy, Matplotlib, Lenstronomy`
+<br>
 ---
 
 
