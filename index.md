@@ -4,13 +4,17 @@
 
 ### Experience
 
-Teaching Assistant
+Teaching Assistant @ UIUC
 <br><br>
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+ - Answered student queries during and after lectures primarily on Magnetism, Circuit Rules, and Optics
+ - Improved accessibility to lectures and course materials for over 200 students
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+Data Analysis Intern @ UIUC
+<br><br>
+ - Simulated multiple complex SERSIC source models in Python using Lenstronomy
+ - Assisted senior researchers with the detection of dark matter using techniques to identify gravitational lensing
+ - Performed analysis on data from said simulations and compared to ALMA data to be presented in weekly reports
 
 ---
 [Project 3 Title](http://example.com/)
