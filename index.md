@@ -40,5 +40,14 @@
 **Libraries:** `WebGL, Pandas, NumPy, Matplotlib, Lenstronomy`
 <br>
 ---
+
+### Relevant Coursework
+<br>
+ - CS 225: Data Structures
+ - CS 418: Interactive Computer Graphics
+ - PHYS 498: Computation in Physics _In Progress_
+ - CS 441: Applied Machine Learning
+ - MATH 415: Applied Linear Algebra
+ - CS 125: Introduction to Computer Science
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->
