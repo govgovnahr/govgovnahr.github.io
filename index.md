@@ -38,23 +38,20 @@ I'm currently looking for SWE or physics-related computational internship positi
 ---
 
 ### Skills
-<br>
 **Languages:** `Java, Python, C/C++, GLSL, SQL, JavaScript, HTML/CSS, MATLAB`
 <br>
 **Tools/Frameworks:** `Git, VSCode, XCode, PyCharm, React, OpenGL, IntelliJ, Android Studio, AdobeSuite, Figma`
 <br>
 **Libraries:** `WebGL, Pandas, NumPy, Matplotlib, Lenstronomy`
-<br>
 ---
 
 ### Relevant Coursework
-<br>
  - CS 225: Data Structures <br>
  - CS 418: Interactive Computer Graphics <br>
  - PHYS 498: Computation in Physics _In Progress_ <br>
  - CS 441: Applied Machine Learning <br>
  - MATH 415: Applied Linear Algebra <br>
- - CS 125: Introduction to Computer Science <br> 
+ - CS 125: Introduction to Computer Science 
 --- 
 
 
