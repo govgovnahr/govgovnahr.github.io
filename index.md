@@ -22,7 +22,8 @@ I'm currently looking for SWE or physics-related computational internship positi
  - PHYS 498: Computation in Physics _In Progress_ <br>
  - CS 441: Applied Machine Learning <br>
  - MATH 415: Applied Linear Algebra
- - 
+ - CS 125: Introduction to Computer Science
+ 
 --- 
 
 ### Experience
