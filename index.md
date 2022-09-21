@@ -35,6 +35,7 @@ I'm currently looking for SWE or physics-related computational full-time positio
 - Determined viability of open-source automation and alerting tools for use in production workflows by senior
 software engineers
 
+---
 **Teaching Assistant** @ _UIUC_
 <br>
  - Answered student queries during and after lectures primarily on Magnetism, Circuit Rules, and Optics
