@@ -1,7 +1,7 @@
 # Hi, I'm Govind.
-I'm a junior in Engineering Physics with a concentration in Computational Physics and a minor in Computer Science at the [University of Illinois at Urbana Champaign](https://illinois.edu). I have a vested interest in both physics and computer science, and I enjoy finding ways that the two intersect. In my spare time, I'm a member of [SIGGlug](https://acm.illinois.edu/sigs), and I also enjoy making music, watching my cats, and learning new things!
+I'm a junior in Engineering Physics with a concentration in Computational Physics and a minor in Computer Science at the [University of Illinois at Urbana Champaign](https://illinois.edu). I have a vested interest in both physics and computer science, and I enjoy finding ways that the two intersect. In my spare time, I enjoy making music, watching my cats, and learning new things!
 <br><br>
-I'm currently looking for SWE or physics-related computational internship positions for Summer 2022! 
+I'm currently looking for SWE or physics-related computational full-time positions starting in 2023! 
 
 ## Portfolio
 
@@ -9,9 +9,9 @@ I'm currently looking for SWE or physics-related computational internship positi
 ---
 
 ### Skills
-**Languages:** `Java, Python, C/C++, GLSL, SQL, JavaScript, HTML/CSS, MATLAB`
+**Languages:** `JavaScript, Python, Groovy, Go, C/C++, GLSL, SQL, Java, HTML/CSS, MATLAB`
 <br>
-**Tools/Frameworks:** `Git, VSCode, XCode, PyCharm, React, OpenGL, IntelliJ, Android Studio, AdobeSuite, Figma`
+**Tools/Frameworks:** `Git, VSCode, AWS ECR, Jenkins, Prometheus, Kubernetes, Docker, Helm, XCode, PyCharm, React, OpenGL, IntelliJ, Android Studio, AdobeSuite, Figma`
 <br>
 **Libraries:** `WebGL, Pandas, NumPy, Matplotlib, Lenstronomy`
 ---
@@ -27,6 +27,13 @@ I'm currently looking for SWE or physics-related computational internship positi
 --- 
 
 ### Experience
+
+**Software Engineer Intern** @ _Sony Interactive Entertainment - PlayStation_
+<br>
+- Designed a monitoring system using Python for resource-intensive Kubernetes applications in production clusters
+- Utilized Jenkins (Groovy) to create internal tooling that notifies senior engineers of failed Kubernetes deployments
+- Determined viability of open-source automation and alerting tools for use in production workflows by senior
+software engineers
 
 **Teaching Assistant** @ _UIUC_
 <br>
