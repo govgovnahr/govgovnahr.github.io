@@ -51,7 +51,7 @@ const INFO = {
 			// logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
 			logo: "playstation.png",
 			// linkText: "View Project",
-			// link: "https://github.com",
+			link: "https://www.linkedin.com/in/govindnair2/",
 		},
 
 		// {
