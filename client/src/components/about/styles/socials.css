@@ -1,4 +1,5 @@
 @import "../../../data/styles.css";
+
 .social,
 .email-wrapper {
 	display: flex;
@@ -8,26 +9,39 @@
 .social a,
 .email-wrapper a {
 	text-decoration: none;
+	display: flex;
+	align-items: center;
 }
 
 .social-icon {
 	font-size: 15px;
-	color: var(--secondary-color);
+	color: var(--text-secondary);
+	transition: color 0.2s ease-in-out;
+}
+
+.social a:hover .social-icon,
+.email-wrapper a:hover .social-icon {
+	color: var(--accent);
 }
 
 .social-text {
-	color: var(--secondary-color);
+	color: var(--text-secondary);
 	padding-left: 30px;
-	margin-top: -20px;
 	font-weight: 600;
 	font-size: 14px;
+	transition: color 0.2s ease-in-out;
+}
+
+.social a:hover .social-text,
+.email-wrapper a:hover .social-text {
+	color: var(--accent);
 }
 
 .email::before {
 	content: "";
 	display: block;
 	padding-top: 20px;
-	border-top: 3px solid #f4f4f5;
+	border-top: 1px solid var(--border);
 	margin-top: 20px;
 }
 

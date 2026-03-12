@@ -6,6 +6,7 @@
 	margin-top: 50px;
 	padding-bottom: 25px;
 	align-items: center;
+	border-top: 1px solid var(--border);
 }
 
 .footer-links,
@@ -31,16 +32,17 @@
 
 .footer-nav-link-list a {
 	text-decoration: none;
-	color: var(--secondary-color);
+	color: var(--text-muted);
 }
 
 .footer-nav-link-list a:hover {
-	color: var(--link-color);
+	color: var(--accent);
+	transition: color 0.2s ease-in-out;
 }
 
 .footer-credits-text {
 	justify-content: flex-end;
-	color: var(--tertiary-color);
+	color: var(--text-muted);
 	font-size: 14px;
 	text-align: right;
 }

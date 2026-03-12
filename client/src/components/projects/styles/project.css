@@ -2,9 +2,11 @@
 
 .project {
 	mix-blend-mode: normal;
-	border-radius: 20px;
-	opacity: 0.8;
+	border-radius: 12px;
+	border: 1px solid var(--border);
+	background-color: var(--bg-card);
 	height: 100%;
+	transition: border-color 0.2s ease-in-out;
 }
 
 .project a {
@@ -12,13 +14,11 @@
 }
 
 .project:hover {
-	background: #fafafa;
-	opacity: 1;
-	transition: background-color 0.3s ease-in-out;
+	border-color: var(--accent);
 }
 
 .project:hover .project-link {
-	color: var(--link-color);
+	color: var(--accent);
 	transition: color 0.3s ease-in-out;
 }
 
@@ -36,7 +36,7 @@
 
 .project-title {
 	font-family: var(--secondary-font);
-	color: var(--primary-color);
+	color: var(--text-primary);
 	font-size: 16px;
 	padding-top: 15px;
 	margin-bottom: 1em;
@@ -44,13 +44,15 @@
 }
 
 .project-description {
-	color: var(--secondary-color);
+	color: var(--text-secondary);
+	font-size: 14px;
+	line-height: 1.6;
 }
 
 .project-link {
 	display: flex;
 	align-items: center;
-	color: var(--secondary-color);
+	color: var(--text-muted);
 	font-size: 12px;
 	padding-top: 20px;
 }
@@ -67,6 +69,6 @@
 
 @media (max-width: 600px) {
 	.project {
-		height: 300px;
+		height: auto;
 	}
 }
