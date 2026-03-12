@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
+import FadeInSection from "../components/common/FadeInSection";
 import AllProjects from "../components/projects/allProjects";
 import WorkTimeline from "../components/work/WorkTimeline";
 import Skills from "../components/skills/Skills";
+import Education from "../components/education/Education";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -18,54 +19,16 @@ import SEO from "../data/seo";
 import "./styles/homepage.css";
 
 const Homepage: React.FC = () => {
-	const [stayLogo, setStayLogo] = useState(false);
-	const [logoSize, setLogoSize] = useState(80);
-	const [oldLogoSize, setOldLogoSize] = useState(80);
-
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	useEffect(() => {
-		const handleScroll = () => {
-			let scroll = Math.round(window.pageYOffset);
-
-			let newLogoSize = 80 - (scroll * 4) / 10;
-
-			if (newLogoSize < oldLogoSize) {
-				if (newLogoSize > 40) {
-					setLogoSize(newLogoSize);
-					setOldLogoSize(newLogoSize);
-					setStayLogo(false);
-				} else {
-					setStayLogo(true);
-				}
-			} else {
-				setLogoSize(newLogoSize);
-				setStayLogo(false);
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, [logoSize, oldLogoSize]);
-
 	const currentSEO = SEO.find((item) => item.page === "home");
-
-	const logoStyle: React.CSSProperties = {
-		display: "flex",
-		position: stayLogo ? "fixed" : "relative",
-		top: stayLogo ? "3vh" : "auto",
-		zIndex: 999,
-		border: stayLogo ? "1px solid var(--border)" : "none",
-		borderRadius: stayLogo ? "50%" : "none",
-		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.5)" : "none",
-	};
 
 	return (
 		<React.Fragment>
 			<Helmet>
-				<title>{INFO.main.title}</title>
+				<title>{`${INFO.main.title} | ${INFO.homepage.tagline}`}</title>
 				<meta
 					name="description"
 					content={currentSEO?.description ?? ""}
@@ -74,43 +37,41 @@ const Homepage: React.FC = () => {
 					name="keywords"
 					content={currentSEO?.keywords.join(", ") ?? ""}
 				/>
+				<meta name="author" content={INFO.main.title} />
 			</Helmet>
 
 			<div className="page-content">
 				<NavBar active="home" />
 				<div className="content-wrapper">
-					<div className="homepage-logo-container">
-						<div style={logoStyle}>
-							<Logo width={logoSize} link={false} />
-						</div>
-					</div>
-
 					<div className="homepage-container">
-						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
-									{INFO.homepage.title}
+						<FadeInSection>
+							<div className="homepage-first-area">
+								<div className="homepage-first-area-left-side">
+									<div className="homepage-tagline">
+										{INFO.homepage.tagline}
+									</div>
+									<h1 className="title homepage-title">
+										{INFO.homepage.title}
+									</h1>
+									<div className="subtitle homepage-subtitle">
+										{INFO.homepage.description}
+									</div>
 								</div>
 
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
-								</div>
-							</div>
-
-							<div className="homepage-first-area-right-side">
-								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
-										<img
-											src="homepage.jpg"
-											alt="about"
-											className="homepage-image"
-										/>
+								<div className="homepage-first-area-right-side">
+									<div className="homepage-image-container">
+										<div className="homepage-image-wrapper">
+											<img
+												src="homepage.jpg"
+												alt="Govind Nair"
+												className="homepage-image"
+											/>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
 
-						<div className="homepage-socials">
+							<div className="homepage-socials">
 							<a
 								href={INFO.socials.github}
 								target="_blank"
@@ -149,25 +110,43 @@ const Homepage: React.FC = () => {
 								Download Resume
 							</a>
 						</div>
+						</FadeInSection>
 
-						<div className="homepage-section">
-							<div className="homepage-section-title">Skills</div>
-							<Skills skills={INFO.skills} />
-						</div>
-
-						<div className="homepage-section">
-							<div className="homepage-section-title">
-								Work Experience
+						<FadeInSection>
+							<div className="homepage-section">
+								<div className="homepage-section-title">
+									Skills
+								</div>
+								<Skills skills={INFO.skills} />
 							</div>
-							<WorkTimeline work={INFO.work} />
-						</div>
+						</FadeInSection>
 
-						<div className="homepage-section">
-							<div className="homepage-section-title">
-								Side Projects
+						<FadeInSection>
+							<div className="homepage-section">
+								<div className="homepage-section-title">
+									Work Experience
+								</div>
+								<WorkTimeline work={INFO.work} />
 							</div>
-							<AllProjects />
-						</div>
+						</FadeInSection>
+
+						<FadeInSection>
+							<div className="homepage-section">
+								<div className="homepage-section-title">
+									Education
+								</div>
+								<Education education={INFO.education} />
+							</div>
+						</FadeInSection>
+
+						<FadeInSection>
+							<div className="homepage-section">
+								<div className="homepage-section-title">
+									Side Projects
+								</div>
+								<AllProjects />
+							</div>
+						</FadeInSection>
 
 						<div className="page-footer">
 							<Footer />

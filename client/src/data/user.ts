@@ -1,4 +1,4 @@
-import { Project, WorkExperience, Skill } from "../types";
+import { Project, WorkExperience, Skill, Education } from "../types";
 
 interface Info {
 	main: {
@@ -13,12 +13,14 @@ interface Info {
 	};
 	homepage: {
 		title: string;
+		tagline: string;
 		description: string;
 	};
 	about: {
 		title: string;
 		description: string;
 	};
+	education: Education;
 	projects: Project[];
 	work: WorkExperience[];
 	skills: Skill[];
@@ -32,7 +34,7 @@ const INFO: Info = {
 		title: "Govind Nair",
 		name: "Govind N.",
 		email: "govindnair28@gmail.com",
-		logo: "../logo.png",
+		logo: "/logo.png",
 	},
 
 	socials: {
@@ -41,7 +43,8 @@ const INFO: Info = {
 	},
 
 	homepage: {
-		title: "Govind Nair | Full-Stack Software Engineer",
+		title: "Govind Nair",
+		tagline: "Full-Stack Software Engineer",
 		description:
 			"Welcome to my personal website! I'm a software engineer with a passion for writing efficient, scalable, and reliable code. I have professional and project experience across a variety of technologies and I'm always looking for a new challenge!",
 	},
@@ -52,6 +55,14 @@ const INFO: Info = {
 			"I'm a software engineer with a passion for writing efficient, scalable, and reliable code, and have professional and project experience across a variety of technologies. After graduating from the University of Illinois at Urbana-Champaign in May 2023 with a degree in Engineering Physics and a minor in Computer Science, I've worked at Sony Interactive Entertainment and C3.ai building full-stack applications, developer tooling, and cloud infrastructure. I'm always looking for a new challenge — feel free to explore some of my work here!",
 	},
 
+	education: {
+		school: "University of Illinois at Urbana-Champaign",
+		degree: "B.S. Engineering Physics, Minor in Computer Science",
+		duration: "Aug 2019 – May 2023",
+		location: "Champaign, IL",
+		concentration: "Computational Physics",
+	},
+
 	projects: [
 		{
 			title: "Where2Be (Startup)",
@@ -60,6 +71,7 @@ const INFO: Info = {
 			logo: "w2b.png",
 			linkText: "View on App Store",
 			link: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
+			tech: ["React Native", "Neo4j", "REST APIs", "Node.js"],
 		},
 
 		{
@@ -69,6 +81,7 @@ const INFO: Info = {
 			logo: "chatgpt.png",
 			linkText: "View Project",
 			link: "https://github.com/govgovnahr/TimeMachine",
+			tech: ["React.js", "Python", "LLaMA v3", "Ollama"],
 		},
 	],
 

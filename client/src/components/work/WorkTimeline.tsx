@@ -6,6 +6,19 @@ interface WorkTimelineProps {
 	work: WorkExperience[];
 }
 
+function highlightMetrics(text: string): React.ReactNode {
+	const pattern = /(\$[\d,.]+[MBK]?|\d+%|\d+\s*engineers?)/g;
+	const parts = text.split(pattern);
+	const metricPattern = /^(\$[\d,.]+[MBK]?|\d+%|\d+\s*engineers?)$/;
+	return parts.map((part, i) =>
+		metricPattern.test(part) ? (
+			<span className="work-metric" key={i}>{part}</span>
+		) : (
+			part
+		)
+	);
+}
+
 const WorkTimeline: React.FC<WorkTimelineProps> = ({ work }) => {
 	return (
 		<div className="work-timeline">
@@ -35,7 +48,7 @@ const WorkTimeline: React.FC<WorkTimelineProps> = ({ work }) => {
 						</div>
 						<ul className="work-bullets">
 							{entry.bullets.map((bullet, i) => (
-								<li key={i}>{bullet}</li>
+								<li key={i}>{highlightMetrics(bullet)}</li>
 							))}
 						</ul>
 					</div>

@@ -4,6 +4,7 @@ export interface Project {
 	logo: string;
 	linkText?: string;
 	link: string;
+	tech?: string[];
 }
 
 export interface WorkExperience {
@@ -18,6 +19,14 @@ export interface WorkExperience {
 export interface Skill {
 	name: string;
 	category: "Languages" | "Frameworks" | "Cloud" | "Tools";
+}
+
+export interface Education {
+	school: string;
+	degree: string;
+	duration: string;
+	location: string;
+	concentration: string;
 }
 
 export interface SeoEntry {

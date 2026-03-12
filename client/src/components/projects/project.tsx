@@ -10,6 +10,7 @@ interface ProjectProps {
 	description: string;
 	linkText?: string;
 	link: string;
+	tech?: string[];
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -18,6 +19,7 @@ const Project: React.FC<ProjectProps> = ({
 	description,
 	linkText,
 	link,
+	tech,
 }) => {
 	return (
 		<React.Fragment>
@@ -29,6 +31,13 @@ const Project: React.FC<ProjectProps> = ({
 						</div>
 						<div className="project-title">{title}</div>
 						<div className="project-description">{description}</div>
+						{tech && tech.length > 0 && (
+							<div className="project-tech">
+								{tech.map((t) => (
+									<span className="project-tech-chip" key={t}>{t}</span>
+								))}
+							</div>
+						)}
 						{linkText && (
 							<div className="project-link">
 								<div className="project-link-icon">

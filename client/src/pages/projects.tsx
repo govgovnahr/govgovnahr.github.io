@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
 import AllProjects from "../components/projects/allProjects";
+import FadeInSection from "../components/common/FadeInSection";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -30,30 +30,30 @@ const Projects: React.FC = () => {
 					name="keywords"
 					content={currentSEO?.keywords.join(", ") ?? ""}
 				/>
+				<meta name="author" content={INFO.main.title} />
 			</Helmet>
 
 			<div className="page-content">
 				<NavBar active="projects" />
 				<div className="content-wrapper">
-					<div className="projects-logo-container">
-						<div className="projects-logo">
-							<Logo width={46} />
-						</div>
-					</div>
 					<div className="projects-container">
-						<div className="title projects-title">
-							What I've built.
-						</div>
+						<FadeInSection>
+							<div className="title projects-title">
+								What I've built.
+							</div>
 
-						<div className="subtitle projects-subtitle">
-							Here's some of my project work as a software
-							developer. Feel free to reach out if you have any
-							questions!
-						</div>
+							<div className="subtitle projects-subtitle">
+								Here's some of my project work as a software
+								developer. Feel free to reach out if you have any
+								questions!
+							</div>
+						</FadeInSection>
 
-						<div className="projects-list">
-							<AllProjects />
-						</div>
+						<FadeInSection delay={100}>
+							<div className="projects-list">
+								<AllProjects />
+							</div>
+						</FadeInSection>
 					</div>
 					<div className="page-footer">
 						<Footer />
