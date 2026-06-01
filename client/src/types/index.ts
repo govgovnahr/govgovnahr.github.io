@@ -1,10 +1,11 @@
 export interface Project {
 	title: string;
 	description: string;
-	logo: string;
+	logo?: string;
 	linkText?: string;
 	link: string;
 	tech?: string[];
+	featured?: boolean;
 }
 
 export interface WorkExperience {

@@ -3,22 +3,14 @@ import { Project, WorkExperience, Skill, Education } from "../types";
 interface Info {
 	main: {
 		title: string;
-		name: string;
 		email: string;
-		logo: string;
 	};
 	socials: {
 		github: string;
 		linkedin: string;
 	};
 	homepage: {
-		title: string;
 		tagline: string;
-		description: string;
-	};
-	about: {
-		title: string;
-		description: string;
 	};
 	education: Education;
 	projects: Project[];
@@ -32,9 +24,7 @@ interface Info {
 const INFO: Info = {
 	main: {
 		title: "Govind Nair",
-		name: "Govind N.",
 		email: "govindnair28@gmail.com",
-		logo: "/logo.png",
 	},
 
 	socials: {
@@ -43,45 +33,42 @@ const INFO: Info = {
 	},
 
 	homepage: {
-		title: "Govind Nair",
-		tagline: "Full-Stack Software Engineer",
-		description:
-			"Welcome to my personal website! I'm a software engineer with a passion for writing efficient, scalable, and reliable code. I have professional and project experience across a variety of technologies and I'm always looking for a new challenge!",
-	},
-
-	about: {
-		title: "I'm Govind. Nice to meet you!",
-		description:
-			"I'm a software engineer with a passion for writing efficient, scalable, and reliable code, and have professional and project experience across a variety of technologies. After graduating from the University of Illinois at Urbana-Champaign in May 2023 with a degree in Engineering Physics and a minor in Computer Science, I've worked at Sony Interactive Entertainment and C3.ai building full-stack applications, developer tooling, and cloud infrastructure. I'm always looking for a new challenge — feel free to explore some of my work here!",
+		tagline: "Full-stack engineer building AI-powered systems",
 	},
 
 	education: {
 		school: "University of Illinois at Urbana-Champaign",
 		degree: "B.S. Engineering Physics, Minor in Computer Science",
-		duration: "Aug 2019 – May 2023",
+		duration: "Aug 2019–May 2023",
 		location: "Champaign, IL",
 		concentration: "Computational Physics",
 	},
 
 	projects: [
 		{
-			title: "Where2Be (Startup)",
+			title: "Tally AI",
 			description:
-				"UIUC-specific event recommendation app with 600+ student downloads. Built the frontend with React Native and backend REST APIs with Neo4j.",
-			logo: "w2b.png",
+				"A personal finance agent built on RAG and LangGraph — asks natural language questions about your own spending, routes between semantic search and SQL depending on intent, and includes an eval harness for answer quality.",
+			linkText: "Visit project",
+			link: "https://tally.wunderblu.com",
+			tech: ["FastAPI", "Supabase", "pgvector", "LangGraph", "OpenAI", "React"],
+			featured: true,
+		},
+		{
+			title: "Moment",
+			description:
+				"React Native event discovery app with 600+ downloads — built the frontend and backend REST APIs connecting to a Neo4j graph database for social and event recommendations.",
 			linkText: "View on App Store",
 			link: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
-			tech: ["React Native", "Neo4j", "REST APIs", "Node.js"],
+			tech: ["React Native", "Neo4j", "Node.js"],
 		},
-
 		{
 			title: "Time Machine",
 			description:
 				"AI chatbot simulating historical conversations using LLM prompt engineering (LLaMA v3) and React.js frontend state management. Includes safeguards to reduce hallucinations.",
-			logo: "chatgpt.png",
-			linkText: "View Project",
+			linkText: "View on GitHub",
 			link: "https://github.com/govgovnahr/TimeMachine",
-			tech: ["React.js", "Python", "LLaMA v3", "Ollama"],
+			tech: ["React.js", "Python", "LLaMA v3"],
 		},
 	],
 
@@ -89,39 +76,38 @@ const INFO: Info = {
 		{
 			company: "C3.ai",
 			role: "Full-Stack Software Engineer",
-			duration: "Sept 2024 – Jan 2026",
+			duration: "Sept 2024–Jan 2026",
 			location: "Redwood City, CA",
 			logo: "c3ai.png",
 			bullets: [
-				"Led technical design and architecture of Total Force Planning Process (TFPP) application, defining data models and frontend architecture for a U.S. Marine Corps personnel planning platform using React, TypeScript, and C3 Platform.",
-				"Owned end-to-end development of TFPP, leading a 3-engineer team from approved specs through production deployment, resulting in estimated annual cost savings of $200M.",
-				"Served as lead developer for USMC Personnel Forecasting Tool (PFT), owning architecture and implementation of scalable workflows for long-term development.",
-				"Communicated with product managers, senior engineers, and stakeholders to translate client requirements into technical designs using Agile/Scrum and Jira.",
+				"Led technical design of Total Force Planning Process (TFPP) application, authoring technical specs, defining data models, and designing frontend architecture for a U.S. Marine Corps (USMC) personnel planning platform using React, TypeScript, and C3 Platform",
+				"Owned end-to-end development of TFPP, leading a 3-engineer team from approved specs through production deployment, resulting in estimated annual cost savings of $200M",
+				"Served as lead developer for USMC Personnel Forecasting Tool (PFT), designing extensible architecture and implementing scalable workflows for long-term development",
+				"Designed a data aggregation pipeline compressing up to 72M personnel records to 5,000 planning-ready entries, enabling real-time forecasting at scale",
 			],
 		},
 		{
 			company: "Sony Interactive Entertainment",
 			role: "Software Engineer",
-			duration: "June 2023 – May 2024",
+			duration: "June 2023–May 2024",
 			location: "San Francisco, CA",
 			logo: "playstation.png",
 			bullets: [
-				"Developed internal support chatbot leveraging AWS Lambda, Python, and LLaMA-based LLM backend, automating responses to engineering support requests and reducing interruptions by 25%.",
-				"Built and maintained CI/CD pipelines using Jenkins, integrating RBAC, Helm chart generation, and ServiceNow workflows, reducing deployment time by up to 30%.",
-				"Devised and constructed dynamic Helm chart generation from schema-driven configurations, standardizing Kubernetes deployments across teams.",
-				"Supported production systems as an on-call engineer, managing Kubernetes clusters, ArgoCD deployments, and operational incidents.",
+				"Owned AWS Lambda and Slack integration for an internal LLM-powered support chatbot, automating responses to engineering support requests and reducing interruptions by 25%",
+				"Built and maintained CI/CD pipelines using Jenkins, integrating RBAC, Helm chart generation, and ServiceNow workflows, reducing deployment time by up to 30%",
+				"Devised and built dynamic Helm chart generation from schema-driven configurations, standardizing Kubernetes deployments across teams",
+				"Supported production systems as an on-call engineer, managing engineering support requests, Kubernetes clusters, ArgoCD deployments, and operational incidents",
 			],
 		},
 		{
 			company: "Sony Interactive Entertainment",
 			role: "Software Engineer Intern",
-			duration: "May 2022 – Aug 2022",
+			duration: "May 2022–Aug 2022",
 			location: "San Francisco, CA",
 			logo: "playstation.png",
 			bullets: [
-				"Built a monitoring system using Python for resource-intensive Kubernetes applications in production clusters.",
-				"Utilized Jenkins (Groovy) to create internal tooling that notifies senior engineers of failed Kubernetes deployments, improving time to resolve by 20%.",
-				"Assessed viability of open-source automation and alerting tools for use in production workflows.",
+				"Built a monitoring system using Python for resource-intensive Kubernetes applications in production clusters",
+				"Utilized Jenkins (Groovy) to create internal tooling that notifies senior engineers of failed Kubernetes deployments, improving time to resolve by 20%",
 			],
 		},
 	],

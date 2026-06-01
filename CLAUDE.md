@@ -19,11 +19,11 @@ No explicit lint command — ESLint runs through react-scripts.
 
 React SPA (Create React App) deployed to GitHub Pages at `https://govgovnahr.github.io`.
 
-**Routing** (`src/App.js`): React Router v6 with routes for `/`, `/about`, `/projects`, `/contact`, and `/*` (404).
+**Routing**: None — single-page scroll, no React Router. `src/App.tsx` renders all sections in order: Hero → Work → Projects → Skills → Education → Footer.
 
-**Data** (`src/data/user.js`): Single `INFO` object is the source of truth for all portfolio content (bio, projects, socials, etc.). Update this file to change site content. SEO metadata lives in `src/data/seo.js`.
+**Data** (`src/data/user.ts`): Single `INFO` object is the source of truth for all portfolio content. Update this file to change site content.
 
-**Components vs Pages**: Pages (`src/pages/`) are route targets — each calls `window.scrollTo(0,0)` on mount and wraps content in NavBar + Logo + Footer. Components (`src/components/`) are organized by page, with a `common/` subfolder for NavBar, Logo, and Footer.
+**Components** (`src/components/`): One flat file per section — `Hero`, `Work`, `Projects`, `Skills`, `Education`, `Footer`. Each has a co-located `.css` file.
 
 **Styling**: Plain CSS files co-located with components (no CSS-in-JS despite styled-components being installed). CSS variables for the design system are in `src/data/styles.css` — primary color `#27272a`, link color `#14b8a6` (teal), fonts Heebo/Roboto. Responsive breakpoints at 1270px, 1024px, 800px with max-width 1000px content wrapper.
 

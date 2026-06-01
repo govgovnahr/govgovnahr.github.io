@@ -1,32 +1,59 @@
-import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
-import ReactGA from "react-ga4";
-
-import Homepage from "./pages/homepage";
-import About from "./pages/about";
-import Projects from "./pages/projects";
-import Notfound from "./pages/404";
-
-import { TRACKING_ID } from "./data/tracking";
+import { useEffect, useState } from "react";
 import "./app.css";
+import Sidebar from "./components/Sidebar";
+import Work from "./components/Work";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Education from "./components/Education";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
+	const [activeSection, setActiveSection] = useState("work");
+
 	useEffect(() => {
-		if (TRACKING_ID !== "") {
-			ReactGA.initialize(TRACKING_ID);
-		}
+		const revealEls = document.querySelectorAll<Element>(".reveal");
+		const revealObs = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("visible");
+						revealObs.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+		);
+		revealEls.forEach((el) => revealObs.observe(el));
+
+		const sections = document.querySelectorAll<Element>("section[id]");
+		const activeObs = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) setActiveSection(entry.target.id);
+				});
+			},
+			{ threshold: 0, rootMargin: "-30% 0px -60% 0px" }
+		);
+		sections.forEach((s) => activeObs.observe(s));
+
+		return () => {
+			revealObs.disconnect();
+			activeObs.disconnect();
+		};
 	}, []);
 
 	return (
-		<div className="App">
-			<Routes>
-				<Route path="/" element={<Homepage />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="*" element={<Notfound />} />
-			</Routes>
+		<div className="app-layout">
+			<aside className="sidebar-col">
+				<Sidebar activeSection={activeSection} />
+			</aside>
+			<main className="content-col">
+				<Work />
+				<Projects />
+				<Skills />
+				<Education />
+				<Footer />
+			</main>
 		</div>
 	);
 }
-
-export default App;
